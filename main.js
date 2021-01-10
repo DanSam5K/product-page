@@ -9,7 +9,27 @@ const app = new Vue({
         linkRef: "https://www.amazon.com/Losa-Kute-Womens-Casual-Nolvety/dp/B07F31CXTC",
         inStock: true,
         inventory: 11,
-        onSale: true
+        onSale: true,
+        details: ["80% cotton", "20% polyester", "Gender-Unisex", "Color-multiColor"],
+        variants: [
+            {
+                variantId: 1,
+                variantColor: "pink",
+            },
+            {
+                variantId: 2,
+                variantColor: "green",
+            },
+            {
+                variantId: 2,
+                variantColor: "yellow",
+            },
+            {
+                variantId: 2,
+                variantColor: "red",
+            }
+        ],
+        sizes: ["size 37", "size 40", "size 42", "size 44"]
 
     }
 
