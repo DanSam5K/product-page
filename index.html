@@ -2,12 +2,15 @@
 <html lang="en">
   <meta charset="UTF-8" />
   <head>
-    <title>Vue - the progressive framework</title>
+    <title>Vue Project</title>
     <link href="./style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <!--Html section of the page-->
     <div id="app">
+        <h1>{{ product }}</h1>
+        <p>{{ description }}</p>
+        <!-- my personal experiment
         <hr><br>
         <div class="product">
             <div class="product-image product">
@@ -17,7 +20,15 @@
                 <h1>{{ products[0].name }}</h1>
                 <p v-if="products[0].inStock">In Stock <span v-show="products[0].onSale">On Sale!</span></p>
                 <p v-else>Out Of Stock!</p>
+                <ul>
+                    <li v-for="detail in products[0].details">{{ detail }}</li>
+                </ul>
+                <div v-for="variant in products[0].variants" :key="products[0].variants[0].variantId">
+                    <p>{{ variant.variantColor }}</p>
+                </div>
             </div>
+
+            // Other product-
             <hr><br>
             <div class="product-image">
                 <img :src="products[1].image" :alt="products[1].alt"/>
@@ -26,6 +37,12 @@
                 <h1>{{ products[1].name }}</h1>
                 <p v-if="products[1].inStock">In Stock <span v-show="products[1].onSale">On Sale!</span></p>
                 <p v-else>Out Of Stock!</p>
+                <ul>
+                    <li v-for="detail in products[1].details">{{ detail }}</li>
+                </ul>
+                <div v-for="variant in products[0].variants[0]" :key="products[0].variants[0].variantId">
+                    <p>{{ variant.variantColor }}</p>
+                </div>
             </div>
             <hr><br>
             <div class="product-image">
@@ -35,9 +52,13 @@
                 <h1>{{ products[2].name }}</h1>
                 <p v-if="products[2].inStock">In Stock <span v-show="products[2].onSale">On Sale!</span></p>
                 <p v-else>Out Of Stock</p>
+                <ul>
+                    <li v-for="detail in products[2].details">{{ detail }}</li>
+                </ul>
             </div>
             <hr><br>
-        </div>
+            
+        </div>  ends here -->
 
         
     </div>
