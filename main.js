@@ -3,7 +3,7 @@ const app = new Vue({
     el: "#app",
     data: {
         product: "Socks",
-        description: "A Set of warm, fuzzy multi-coloured Socks:Losa Kute 4/5 Pairs Womens Crew Socks Women Casual Nolvety Funny Long Cute Socks",
+        description: "A Set of warm, fuzzy multi-coloured Socks",
         image: "./images/4colourcombosocks.jpg",
         altText: "four colour variety socks",
         linkRef: "https://www.amazon.com/Losa-Kute-Womens-Casual-Nolvety/dp/B07F31CXTC",
@@ -14,24 +14,47 @@ const app = new Vue({
         variants: [
             {
                 variantId: 1,
+                variantColor: "blue",
+                variantImage: "./images/blue-socks.jpg"
+            },
+            {
+                variantId: 2,
                 variantColor: "pink",
+                variantImage: "./images/Pink.jpg"
             },
             {
-                variantId: 2,
+                variantId: 3,
                 variantColor: "green",
+                variantImage: "./images/green.jpg"
             },
             {
-                variantId: 2,
+                variantId: 4,
                 variantColor: "yellow",
+                variantImage: "./images/yellow.jpg"
             },
             {
-                variantId: 2,
+                variantId: 5,
                 variantColor: "red",
+                variantImage: "./images/red.jpg"
             }
         ],
-        sizes: ["size 37", "size 40", "size 42", "size 44"]
+        sizes: ["size 37", "size 40", "size 42", "size 44"],
+        cart: 0
+    },
+        //methods
+    methods:{
+        addToCart() {
+        this.cart +=1 ;
+        },
 
+        updateProduct(variantImage){
+            this.image = variantImage;
+        },
+        removeFromCart() {
+            this.cart -=1;
+        }
     }
+     
 
 
     // el: '#app',
