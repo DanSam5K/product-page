@@ -3,7 +3,11 @@ const app = new Vue({
     el: "#app",
     data: {
         product: "Socks",
-        description: "A Set of warm, fuzzy multi-coloured Socks"
+        description: "A Set of warm, fuzzy multi-coloured Socks:Losa Kute 4/5 Pairs Womens Crew Socks Women Casual Nolvety Funny Long Cute Socks",
+        image: "./images/4colourcombosocks.jpg",
+        altText: "four colour variety socks",
+        linkRef: "https://www.amazon.com/Losa-Kute-Womens-Casual-Nolvety/dp/B07F31CXTC"
+
     }
 
 
