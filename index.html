@@ -8,9 +8,22 @@
   <body>
     <!--Html section of the page-->
     <div id="app">
-        <h1>{{ product }}</h1>
-        <p>{{ description }}</p>
-        <a :href="linkRef" target="_blank"><img :src="image" :alt="altText" :href="linkRef"/></a>
+        <div class="product">
+            <div>
+                <a :href="linkRef" target="_blank"><img :src="image" :alt="altText" :href="linkRef"/></a>
+            </div>
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+                <p>{{ description }}</p>
+                <p v-if="inventory > 10">In Stock <span v-if="onSale">On Sale!</span> <span v-else>Sold Out!</span> </p>
+                <p v-else-if="inventory <= 10 && inventory > 0">In Stock Almost sold out!</p>
+                <p v-else>Out of Stock</p>
+            </div>
+            
+            
+        </div>
+        
+
 
         <!-- my personal experiment
         <hr><br>
