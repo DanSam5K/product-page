@@ -7,8 +7,8 @@ const app = new Vue({
         image: "./images/4colourcombosocks.jpg",
         altText: "four colour variety socks",
         linkRef: "https://www.amazon.com/Losa-Kute-Womens-Casual-Nolvety/dp/B07F31CXTC",
-        inStock: true,
-        inventory: 11,
+        inStock: false,
+        inventory: 0,
         onSale: true,
         details: ["80% cotton", "20% polyester", "Gender-Unisex", "Color-multiColor"],
         variants: [
