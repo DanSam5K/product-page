@@ -10,19 +10,23 @@
     <div id="app">
         <div class="product">
             <div>
+                <h1>{{ title }}</h1>
+            </div>
+            <div>
                 <a :href="linkRef" target="_blank"><img :src="image" :alt="altText" :href="linkRef"/></a>
             </div>
             <div class="product-info">
-                <h1>{{ product }}</h1>
+                <h2>{{ product }}</h2>
                 <p>{{ description }}</p>
                 <p v-if="inventory > 10">In Stock <span v-if="onSale">On Sale!</span> <span v-else>Sold Out!</span> </p>
                 <p v-else-if="inventory <= 10 && inventory > 0">In Stock Almost sold out!</p>
                 <p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
+                <p>{{sale}}</p>
                 <ul>
                     <li v-for="detail in details">{{ detail }}</li>
                 </ul>
 
-                <div class="color-box" v-for="variant in variants" :key="variant.variantId" :style=" { backgroundColor: variant.variantColor }" @mouseover="updateProduct(variant.variantImage)">
+                <div class="color-box" v-for="(variant, index) in variants" :key="variant.variantId" :style=" { backgroundColor: variant.variantColor }" @mouseover="updateProduct(index)" >
                     
                 </div>
                 <div>   
