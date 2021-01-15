@@ -8,7 +8,13 @@
   <body>
     <!--Html section of the page-->
     <div id="app">
-        <div class="product">
+        <div class="nav-bar"></div>
+        <product :premium="premium">
+        </product>
+        <product></product>
+        <product></product>
+
+        <!-- <div class="product">
             <div>
                 <h1>{{ title }}</h1>
             </div>
@@ -43,7 +49,7 @@
                 </div>
 
                 <button v-on:click="removeFromCart">Remove From cart</button>
-            </div>
+            </div> -->
             
             
         </div>
