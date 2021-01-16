@@ -9,7 +9,10 @@
     <!--Html section of the page-->
     <div id="app">
         <div class="nav-bar"></div>
-        <product :premium="premium">
+        <div class="cart">
+            <p>Cart({{ cart.length }})</p>
+        </div>
+        <product :premium="premium" @add-to-cart="updateCart" @remove-from-cart="deleteCart">
         </product>
         <product></product>
         <product></product>
