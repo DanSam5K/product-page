@@ -12,104 +12,10 @@
         <div class="cart">
             <p>Cart({{ cart.length }})</p>
         </div>
-        <product :premium="premium" @add-to-cart="updateCart" @remove-from-cart="deleteCart">
-        </product>
-        <product></product>
-        <product></product>
-
-        <!-- <div class="product">
-            <div>
-                <h1>{{ title }}</h1>
-            </div>
-            <div>
-                <a :href="linkRef" target="_blank"><img :src="image" :alt="altText" :href="linkRef"/></a>
-            </div>
-            <div class="product-info">
-                <h2>{{ product }}</h2>
-                <p>{{ description }}</p>
-                <p v-if="inventory > 10">In Stock <span v-if="onSale">On Sale!</span> <span v-else>Sold Out!</span> </p>
-                <p v-else-if="inventory <= 10 && inventory > 0">In Stock Almost sold out!</p>
-                <p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
-                <p>{{sale}}</p>
-                <ul>
-                    <li v-for="detail in details">{{ detail }}</li>
-                </ul>
-
-                <div class="color-box" v-for="(variant, index) in variants" :key="variant.variantId" :style=" { backgroundColor: variant.variantColor }" @mouseover="updateProduct(index)" >
-                    
-                </div>
-                <div>   
-                    <ul>
-                        <li v-for="size in sizes">{{ size }}</li>
-                    </ul>
-                </div>
-                <div>
-                    <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to cart</button>
-                </div>
-
-                <div class="cart">
-                    <p>Cart({{ cart }})</p>
-                </div>
-
-                <button v-on:click="removeFromCart">Remove From cart</button>
-            </div> -->
-            
-            
+        <div>
+            <product :premium="premium" @add-to-cart="updateCart" @remove-from-cart="deleteCart">
+            </product>
         </div>
-        
-
-
-        <!-- my personal experiment
-        <hr><br>
-        <div class="product">
-            <div class="product-image product">
-                <img :src="products[0].image" :alt="products[0].alt"/>
-            </div>
-            <div class="product-info">
-                <h1>{{ products[0].name }}</h1>
-                <p v-if="products[0].inStock">In Stock <span v-show="products[0].onSale">On Sale!</span></p>
-                <p v-else>Out Of Stock!</p>
-                <ul>
-                    <li v-for="detail in products[0].details">{{ detail }}</li>
-                </ul>
-                <div v-for="variant in products[0].variants" :key="products[0].variants[0].variantId">
-                    <p>{{ variant.variantColor }}</p>
-                </div>
-            </div>
-
-            // Other product-
-            <hr><br>
-            <div class="product-image">
-                <img :src="products[1].image" :alt="products[1].alt"/>
-            </div>
-            <div class="product-info">
-                <h1>{{ products[1].name }}</h1>
-                <p v-if="products[1].inStock">In Stock <span v-show="products[1].onSale">On Sale!</span></p>
-                <p v-else>Out Of Stock!</p>
-                <ul>
-                    <li v-for="detail in products[1].details">{{ detail }}</li>
-                </ul>
-                <div v-for="variant in products[0].variants[0]" :key="products[0].variants[0].variantId">
-                    <p>{{ variant.variantColor }}</p>
-                </div>
-            </div>
-            <hr><br>
-            <div class="product-image">
-                <img :src="products[2].image" :alt="products[2].alt" />
-            </div>
-            <div class="product-info">
-                <h1>{{ products[2].name }}</h1>
-                <p v-if="products[2].inStock">In Stock <span v-show="products[2].onSale">On Sale!</span></p>
-                <p v-else>Out Of Stock</p>
-                <ul>
-                    <li v-for="detail in products[2].details">{{ detail }}</li>
-                </ul>
-            </div>
-            <hr><br>
-            
-        </div>  ends here -->
-
-        
     </div>
 
     <!--script section-->
